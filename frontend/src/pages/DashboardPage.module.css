@@ -1,0 +1,133 @@
+.page { animation: fadeIn 0.3s ease; }
+.loading { color: var(--text-2); font-family: var(--font-mono); font-size: 14px; padding: 40px; }
+
+.topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.greeting { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; }
+.sub { color: var(--text-2); font-size: 14px; margin-top: 4px; }
+.newTaskBtn {
+  background: var(--accent);
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 0.15s;
+  font-family: var(--font-sans);
+}
+.newTaskBtn:hover { background: var(--accent-hover); }
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.statCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  transition: border-color 0.15s;
+}
+.statCard:hover { border-color: var(--border-hover); }
+.statValue { font-size: 30px; font-weight: 800; letter-spacing: -1px; margin-bottom: 4px; }
+.statLabel { font-size: 12px; color: var(--text-2); font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+
+.color_accent .statValue { color: var(--accent); }
+.color_green .statValue { color: var(--green); }
+.color_yellow .statValue { color: var(--yellow); }
+.color_blue .statValue { color: var(--blue); }
+
+.progressCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+}
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-2);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.progressPct { color: var(--green); font-family: var(--font-mono); }
+.progressTrack {
+  height: 8px;
+  background: var(--bg-card2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--green));
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+.progressMeta { font-size: 12px; color: var(--text-3); margin-top: 8px; }
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 16px;
+}
+@media (max-width: 900px) { .bottomGrid { grid-template-columns: 1fr; } }
+
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+.panelTitle { font-size: 14px; font-weight: 700; margin-bottom: 16px; }
+.panelTitleRow { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.viewAll { font-size: 12px; color: var(--accent); font-weight: 600; }
+.viewAll:hover { text-decoration: underline; }
+
+.statusList { display: flex; flex-direction: column; gap: 12px; }
+.statusRow { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.dot_blue { background: var(--blue); }
+.dot_yellow { background: var(--yellow); }
+.dot_green { background: var(--green); }
+.dot_red { background: var(--red); }
+.statusLabel { flex: 1; color: var(--text-2); font-family: var(--font-mono); font-size: 12px; }
+.statusCount { font-weight: 700; }
+
+.recentList { display: flex; flex-direction: column; gap: 10px; }
+.recentItem {
+  padding: 12px 14px;
+  background: var(--bg-card2);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.recentTitle { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.recentMeta { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.chip_blue { background: var(--blue-dim); color: var(--blue); }
+.chip_yellow { background: var(--yellow-dim); color: var(--yellow); }
+.chip_green { background: var(--green-dim); color: var(--green); }
+.chip_red { background: var(--red-dim); color: var(--red); }
+.chip_text3 { background: var(--bg-card); color: var(--text-3); }
+
+.empty { font-size: 13px; color: var(--text-3); }
+.empty a { color: var(--accent); }
